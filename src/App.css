@@ -510,7 +510,7 @@ will-change: transform;
 .videoCard {
   width: 100%;
   aspect-ratio: 16 / 9;
-  height: 300px;
+  height:300px;
   /* min-height: 220px;   important */
 
   overflow: hidden;
@@ -577,7 +577,7 @@ color:#ffcc70;
 
 @media (max-width: 768px) {
   .videoCard {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 15 / 10;
     /* min-height: 250px;   */
     height: auto;
   }
@@ -726,6 +726,22 @@ transform:translateY(0);
 }
 
 
+.wedding-video{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  margin-bottom: 30px;
+}
+@media (max-width: 1200px) {
+  .wedding-video{
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  .wedding-video{
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 
 @media (max-width: 992px) {
@@ -811,6 +827,7 @@ transform:translateY(0);
     font-size: 1.1rem;
     margin-bottom: 24px;
   }
+  
   
 
 }
@@ -1515,6 +1532,9 @@ width:100%;
   .next{
     right: 5px;
     width: 33px;
+  }
+    .portfolio{
+    padding:10px 14px 10px 14px
   }
 
 

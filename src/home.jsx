@@ -35,7 +35,7 @@ return(
   <div className="navbar">
 
 <div className="logo">
-<img src="photo.png" alt="logo"/>
+<img src="chatgpt.png" style={{filter: "invert(0)"}} alt="logo"/>
 </div>
 <img className="menu" src= {!navbarpop ? "menu.png" : "cut.png"} alt="menu" onClick={()=> setnavbarpop(!navbarpop)}/>
 <ul className="navLinks">
@@ -94,13 +94,13 @@ return(
 
 <div className="wedding">
 
-<img src="wedding1.jpg" decoding="async" loading="lazy" alt="" onClick={()=>setselectedimg("wedding1.jpg")} />
+<img src="shaktiwed7.jpg" decoding="async" loading="lazy" alt="" onClick={()=>setselectedimg("shaktiwed7.jpg")} />
 
-<img src="wedding3.jpg" decoding="async" loading="lazy" alt="" onClick={()=>setselectedimg("wedding3.jpg")} />
+<img src="shaktiwed2.jpg" decoding="async" loading="lazy" alt="" onClick={()=>setselectedimg("shaktiwed2.jpg")} />
 
-<img src="wedding4.jpg" decoding="async" loading="lazy" alt="" onClick={()=>setselectedimg("wedding4.jpg")} />
+<img src="shaktiwed3.jpg" decoding="async" loading="lazy" alt="" onClick={()=>setselectedimg("shaktiwed3.jpg")} />
 
-<img src="wedding5.jpg" decoding="async" loading="lazy" alt="" onClick={()=>setselectedimg("wedding5.jpg")} />
+<img src="shaktiwed4.jpg" decoding="async" loading="lazy" alt="" onClick={()=>setselectedimg("shaktiwed4.jpg")} />
 
 </div>
 
@@ -113,7 +113,7 @@ return(
 
 
 
-<h1>Pre-Wedding</h1>
+{/* <h1>Pre-Wedding</h1>
 
 <div className="wedding">
 
@@ -132,7 +132,7 @@ return(
 
 <h3 className="morebtn">View More</h3>
 
-</div>
+</div> */}
 
 
 
@@ -140,13 +140,13 @@ return(
 
 <div className="wedding">
 
-<img src="birthday1.jpg" loading="lazy" onClick={()=>setselectedimg("birthday1.jpg")} />
+<img src="shaktibir6.jpg" loading="lazy" onClick={()=>setselectedimg("shaktibir6.jpg")} />
 
-<img src="birthday2.jpg" loading="lazy" onClick={()=>setselectedimg("birthday2.jpg")} />
+<img src="shaktibir2.jpg" loading="lazy" onClick={()=>setselectedimg("shaktibir2.jpg")} />
 
-<img src="birthday3.jpg" loading="lazy" onClick={()=>setselectedimg("birthday3.jpg")} />
+<img src="shaktibir3.jpg" loading="lazy" onClick={()=>setselectedimg("shaktibir3.jpg")} />
 
-<img src="birthday6.jpg" loading="lazy" onClick={()=>setselectedimg("birthday6.jpg")} />
+<img src="shaktibir8.jpg" loading="lazy" onClick={()=>setselectedimg("shaktibir8.jpg")} />
 
 </div>
 
@@ -230,24 +230,14 @@ return(
 
 <h1>Video shoots</h1>
 
-<div className="wedding">
+<div className="wedding-video">
 
-<div className="videoCard">
-
-<iframe
-src="https://www.youtube.com/embed/qHxxmWySb6c"
-
-title="video1"
-allowFullScreen
-></iframe>
-
-</div>
 
 
 <div className="videoCard">
 
 <iframe
-src="https://www.youtube.com/embed/0V9X0WPM-5E"
+src="https://drive.google.com/file/d/1P0UgvMXxXD4-2Q1OO6ocvAkiTaZ-eo6R/preview"
 loading="lazy"
 title="video2"
 allowFullScreen
@@ -255,11 +245,10 @@ allowFullScreen
 
 </div>
 
-
 <div className="videoCard">
 
 <iframe
-src="https://www.youtube.com/embed/egWNAVfQ0P0"
+src="https://drive.google.com/file/d/1n5-w7QbTHWsBBEhEhNzbCNYd_Ypoz5SX/preview"
 loading="lazy"
 title="video3"
 allowFullScreen
@@ -267,13 +256,36 @@ allowFullScreen
 
 </div>
 
+<div className="videoCard">
+
+<iframe
+src="https://drive.google.com/file/d/1z0KaMLoHfgLHY_9dL16XVjiglpmXMspf/preview"
+loading="lazy"
+title="video2"
+allowFullScreen
+></iframe>
+
+</div>
 
 <div className="videoCard">
 
 <iframe
-src="https://www.youtube.com/embed/8W9o_5OfquQ"
-loading="lazy"
-title="video4"
+src="https://drive.google.com/file/d/1KYWclvVSK5VQExADGpcO8fSxbbvYxmSP/preview"
+allow="autoplay"
+title="video1"
+allowFullScreen
+></iframe>
+
+</div>
+
+
+
+<div className="videoCard">
+
+<iframe
+src="https://drive.google.com/file/d/16PIfmBshw740IrBJmFtV_PRPMHw9NrZN/preview"
+allow="autoplay"
+title="video1"
 allowFullScreen
 ></iframe>
 
@@ -285,7 +297,7 @@ allowFullScreen
 
 <div
 className="viewMoreCard"
-onClick={()=>window.open("https://www.youtube.com/@KuruvanshiFacts","_blank")}
+onClick={()=>window.open("https://www.instagram.com/kapil_studio_gadarwara/reel/DJ7oqydz5_S/", "_blank")}
 >
 
 <h3 className="morebtn">View More</h3>

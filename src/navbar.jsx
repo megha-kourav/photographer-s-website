@@ -11,7 +11,7 @@ function Navbar() {
   <div className="navbar">
 
 <div className="logo">
-<img src="/photo.png" alt="logo"/>
+<img src="/chatgpt.png" style={{filter:"invert(0)"}} alt="logo"/>
 </div>
 <img className="menu" src= {!navbarpop ? "/menu.png" : "/cut.png"} alt="menu" onClick={()=> setnavbarpop(!navbarpop)}/>
 <ul className="navLinks">

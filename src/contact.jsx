@@ -146,9 +146,9 @@ Tell us about your event and we'll get back to you soon.
 
 <h2>Direct Contact</h2>
 
-<div className="contactItem" onClick={() => window.location.href = "tel:+919876543210"}>
+<div className="contactItem" onClick={() => window.location.href = "tel:9644371311"}>
 <img src="phone.png" alt="" />
-<p>+91 9876543210</p>
+<p>+91 9644371311</p>
 </div>
 
 <div onClick={()=> window.open("https://www.instagram.com/kourav_adi345","_blank")} className="contactItem">

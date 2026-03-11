@@ -4,10 +4,13 @@ import Contact from "./contact"
 import Home from "./home"
 import About from "./about"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+
 function App() {
 
 
 return(
+
+
   <BrowserRouter>
   <Routes>
     <Route path="/" element={<Home />}/>
@@ -16,6 +19,7 @@ return(
     <Route path="/contact" element={<Contact />} />
   </Routes>
   </BrowserRouter>
+   
 )
 }
 

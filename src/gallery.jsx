@@ -9,7 +9,7 @@ function Gallery() {
   const [gallery, setgallery] = useState([])
   const [selectedimg, setselectedimg] = useState(null)
   const imgs = {
-    wedding: ["/wedding7.jpg", "/wedding8.jpg", "/wedding9.webp", "/wedding10.jpeg", "/wedding11.avif", "/wedding12.jpg", "/wedding13.jpg", "/wedding14.jpg", "/wedding1.jpg", "/wedding5.jpg", "/wedding3.jpg", "/wedding4.jpg"],
+    wedding: ["/shaktiwed8.jpg", "/shaktiwed11.jpg", "/shaktiwed10.jpg", "/shaktiwed9.jpg", "/shaktiwed13.jpg", "/shaktiwed7.jpg", "/shaktiwed6.jpg", "/shaktiwed5.webp", "/shaktiwed4.jpg", "/shaktiwed3.jpg", "/shaktiwed2.jpg","/shaktiwed1.jpg" ],
     prewedding: [ "/prewedding7.jpg", "/prewedding15.jpg", "/prewedding9.jpg",  "/prewedding2.jpg", "/prewedding3.jpeg", "/prewedding10.png", "/prewedding11.webp", "/prewedding12.webp", "/prewedding14.webp" ,"/prewedding13.webp", "/prewedding1.jpg", "/prewedding4.jpg"],
     birthday: ["/birthday1.jpg", "/birthday2.jpg", "/birthday3.jpg", "/birthday4.jpeg", "/birthday6.jpg", "/birthday2.jpg", "/birthday1.jpg"],
     engagement: ["/eng1.avif", "/eng2.jpg", "/eng3.jpg", "/eng4.jpg", "/eng1.avif", "/eng2.jpg", "/eng3.jpg"],
