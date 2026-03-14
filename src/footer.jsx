@@ -25,7 +25,7 @@ function Footer() {
     <div className="footer-col">
       <h3>Quick Links</h3>
       <ul className="footer-list">
-        <li><a href="#" >Home</a></li>
+        <li><Link to="/" >Home</Link></li>
         <li><Link to="/about">About</Link></li>
         <li onClick={()=>{
   setTimeout(()=>{

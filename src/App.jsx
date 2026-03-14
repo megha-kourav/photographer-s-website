@@ -7,9 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App() {
 
-
 return(
-
 
   <BrowserRouter>
   <Routes>
@@ -19,7 +17,7 @@ return(
     <Route path="/contact" element={<Contact />} />
   </Routes>
   </BrowserRouter>
-   
+
 )
 }
 

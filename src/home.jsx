@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom"
 import Scroller from "./scroller"
 import Footer from "./footer"
 import { Link } from "react-router-dom"
+import Whatsapp from "./whatsapp"
 
 function Home() {
 
@@ -35,7 +36,7 @@ return(
   <div className="navbar">
 
 <div className="logo">
-<img src="chatgpt.png" style={{filter: "invert(0)"}} alt="logo"/>
+<img src="shakti.png" style={{filter: "invert(0)"}} alt="logo"/>
 </div>
 <img className="menu" src= {!navbarpop ? "menu.png" : "cut.png"} alt="menu" onClick={()=> setnavbarpop(!navbarpop)}/>
 <ul className="navLinks">
@@ -110,29 +111,6 @@ return(
 <h3 className="morebtn">View More</h3>
 
 </div>
-
-
-
-{/* <h1>Pre-Wedding</h1>
-
-<div className="wedding">
-
-<img src="prewedding1 - Copy.jpg"  loading="lazy" onClick={()=>setselectedimg("prewedding1.jpg")} />
-
-<img src="prewedding2.jpg" loading="lazy" onClick={()=>setselectedimg("prewedding2.jpg")} />
-
-<img src="prewedding3 - Copy.jpeg" loading="lazy" onClick={()=>setselectedimg("prewedding3.jpeg")} />
-
-<img src="prewedding4 - Copy.jpg" loading="lazy" onClick={()=>setselectedimg("prewedding4.jpg")} />
-
-</div>
-
-
-<div className="viewMoreCard" onClick={()=>navigate("/gallery/prewedding")}>
-
-<h3 className="morebtn">View More</h3>
-
-</div> */}
 
 
 
@@ -341,6 +319,7 @@ onClick={()=>window.open("https://www.instagram.com/kapil_studio_gadarwara/reel/
 )}
 
 <Scroller />
+<Whatsapp />
 
 <Footer />
 

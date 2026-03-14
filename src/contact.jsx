@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import Scroller from "./scroller"
 import Navbar from "./navbar"
 import Footer from "./footer"
+import Whatsapp from "./whatsapp";
 
 function Contact() {
     const [name, setname] = useState("")
@@ -79,7 +80,7 @@ Message:
 ${msg}
 `
 
-const url = `https://wa.me/916263268853?text=${encodeURIComponent(text)}`
+const url = `https://wa.me/917828053425?text=${encodeURIComponent(text)}`
 
 window.open(url,"_blank")
 
@@ -172,6 +173,7 @@ Tell us about your event and we'll get back to you soon.
 
 </div>
 <Scroller />
+<Whatsapp />
 <Footer />
 </>
     )

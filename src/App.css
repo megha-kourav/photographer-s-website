@@ -472,6 +472,15 @@ will-change: transform;
   rotate: 89deg;
 
 }
+.whatsappicon{
+  position: fixed;
+  width: 43px;
+  height: 43px;
+  bottom: 150px;
+  right: 41px;
+
+}
+
 
 .backArrow img:active {
   background: #735605a5;
@@ -498,6 +507,14 @@ will-change: transform;
   right: 22px;
   padding: 4px;
   }
+  .whatsappicon{
+  bottom: 110px;
+  right: 23px;
+  width: 35px;
+  height: 35px;
+
+}
+
     .portfolio h1{
     margin-bottom: 20px;
   }
@@ -803,7 +820,8 @@ transform:translateY(0);
     margin-bottom: 30px;
   }
   .closeBtn{
-    top: 50px;
+    top: 34px;
+    right: 25px;
   }
 
 }

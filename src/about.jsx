@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react";
 import Scroller from "./scroller";
+import Whatsapp from "./whatsapp";
 
 import Navbar from "./navbar";
 import Footer from "./footer";
@@ -147,6 +148,7 @@ and let the emotions tell the story.
 
 </div>
 <Scroller />
+<Whatsapp />
 <Footer />
 </>
   )
