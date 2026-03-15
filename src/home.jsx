@@ -9,323 +9,332 @@ import Whatsapp from "./whatsapp"
 
 function Home() {
 
-const navigate = useNavigate()
-const [selectedimg, setselectedimg] = useState(null)
-// const [scrolly, setscrolly] = useState(0)
-const [navbarpop, setnavbarpop] = useState(false)
+  const navigate = useNavigate()
+  const [selectedimg, setselectedimg] = useState(null)
+  // const [scrolly, setscrolly] = useState(0)
+  const [navbarpop, setnavbarpop] = useState(false)
 
-// useEffect(()=>{
+  // useEffect(()=>{
 
-// function handle(){
-// setscrolly(window.scrollY)
-// }
+  // function handle(){
+  // setscrolly(window.scrollY)
+  // }
 
-// window.addEventListener("scroll", handle)
+  // window.addEventListener("scroll", handle)
 
-// return()=>{
-// window.removeEventListener("scroll", handle)
-// }
+  // return()=>{
+  // window.removeEventListener("scroll", handle)
+  // }
 
-// },[])
+  // },[])
+  const images = [
+"/photographerspic.jpg",
+"/photos/indorehaldi6.jpg",
+"/photos/indorewed14.jpg"
+];
 
-return(
-<>
+const [index,setIndex] = useState(0);
 
-<section className="hero">
+useEffect(()=>{
 
-  <div className="navbar">
+const interval = setInterval(()=>{
 
-<div className="logo">
-<img src="shakti.png" style={{filter: "invert(0)"}} alt="logo"/>
-</div>
-<img className="menu" src= {!navbarpop ? "menu.png" : "cut.png"} alt="menu" onClick={()=> setnavbarpop(!navbarpop)}/>
-<ul className="navLinks">
-<li><Link to="/" >Home</Link></li>
-<li><a href="#portfolio">Portfolio</a></li>
-<li><Link to="/about" >About</Link></li>
-<li><Link to= "/contact"  >Contact</Link></li>
-</ul>
+setIndex((prev)=> (prev + 1) % images.length);
 
-</div>
+},4000);
 
-<div className="heroContent">
+return ()=> clearInterval(interval);
 
-<h1>Capturing Moments <br/> <span>That Last Forever</span></h1>
-<p>Premium Wedding Photography in Gadarwara</p>
+},[]);
 
-<button className="check" onClick={()=> navigate("/contact")}>Check Availability</button>
+  return (
+    <>
 
-<a href="#portfolio">
-<button className="viewbtn">View Portfolio</button>
-</a>
+      <section className="hero" style={{backgroundImage:`url(${images[index]})`}}>
 
-</div>
+        <div className="navbar">
 
-</section>
+          <div className="logo">
+            <img src="/photos/pristine.png" style={{ filter: "invert(1)" }} alt="logo" />
+          </div>
+          <img className="menu" src={!navbarpop ? "menu.png" : "cut.png"} alt="menu" onClick={() => setnavbarpop(!navbarpop)} />
+          <ul className="navLinks">
+            <li><Link to="/" >Home</Link></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><Link to="/about" >About</Link></li>
+            <li><Link to="/contact"  >Contact</Link></li>
+          </ul>
 
+        </div>
 
-<section className="stats">
+        <div className="heroContent">
 
-<div className="captured">
-<h2>200+</h2>
-<p>Weddings Captured</p>
-</div>
+          <h1>Capturing Moments <br /> <span>That Last Forever</span></h1>
+          <p>Premium Wedding Photography in Indore</p>
 
-<div className="years">
-<h2>5+</h2>
-<p>Years Experience</p>
-</div>
+          <button className="check" onClick={() => navigate("/contact")}>Check Availability</button>
 
-<div className="clients">
-<h2>500+</h2>
-<p>Happy Clients</p>
-</div>
+          <a href="#portfolio">
+            <button className="viewbtn">View Portfolio</button>
+          </a>
 
-</section>
+        </div>
 
+      </section>
 
 
-<section className="portfolio" id="portfolio">
+      <section className="stats">
 
-<h2>Our Portfolio</h2>
-<p>Beautiful Stories We've Captured</p>
+        <div className="captured">
+          <h2>200+</h2>
+          <p>Weddings Captured</p>
+        </div>
 
+        <div className="years">
+          <h2>5+</h2>
+          <p>Years Experience</p>
+        </div>
 
-<h1>Wedding</h1>
+        <div className="clients">
+          <h2>500+</h2>
+          <p>Happy Clients</p>
+        </div>
 
-<div className="wedding">
+      </section>
 
-<img src="shaktiwed7.jpg" decoding="async" loading="lazy" alt="" onClick={()=>setselectedimg("shaktiwed7.jpg")} />
 
-<img src="shaktiwed2.jpg" decoding="async" loading="lazy" alt="" onClick={()=>setselectedimg("shaktiwed2.jpg")} />
 
-<img src="shaktiwed3.jpg" decoding="async" loading="lazy" alt="" onClick={()=>setselectedimg("shaktiwed3.jpg")} />
+      <section className="portfolio" id="portfolio">
 
-<img src="shaktiwed4.jpg" decoding="async" loading="lazy" alt="" onClick={()=>setselectedimg("shaktiwed4.jpg")} />
+        <h2>Our Portfolio</h2>
+        <p>Beautiful Stories We've Captured</p>
 
-</div>
 
+        <h1>Wedding</h1>
 
-<div className="viewMoreCard" onClick={()=>navigate("/gallery/wedding")}>
+        <div className="wedding">
 
-<h3 className="morebtn">View More</h3>
+          <img src="/photos/indorewed13.jpg" decoding="async" loading="lazy" alt="" onClick={() => setselectedimg("/photos/indorewed13.jpg")} />
 
-</div>
+          <img src="/photos/indorewed14.jpg" decoding="async" loading="lazy" alt="" onClick={() => setselectedimg("/photos/indorewed14.jpg")} />
 
+          <img src="/photos/indorewed12.jpg" decoding="async" loading="lazy" alt="" onClick={() => setselectedimg("/photos/indorewed12.jpg")} />
 
+          <img src="/photos/indorewed5.jpg" decoding="async" loading="lazy" alt="" onClick={() => setselectedimg("/photos/indorewed5.jpg")} />
 
-<h1>Birthday</h1>
+        </div>
 
-<div className="wedding">
 
-<img src="shaktibir6.jpg" loading="lazy" onClick={()=>setselectedimg("shaktibir6.jpg")} />
+        <div className="viewMoreCard" onClick={() => navigate("/gallery/wedding")}>
 
-<img src="shaktibir2.jpg" loading="lazy" onClick={()=>setselectedimg("shaktibir2.jpg")} />
+          <h3 className="morebtn">View More</h3>
 
-<img src="shaktibir3.jpg" loading="lazy" onClick={()=>setselectedimg("shaktibir3.jpg")} />
+        </div>
 
-<img src="shaktibir8.jpg" loading="lazy" onClick={()=>setselectedimg("shaktibir8.jpg")} />
+        <h1>Haldi</h1>
 
-</div>
+        <div className="wedding">
 
+          <img src="/photos/indorehaldi2.jpg" loading="lazy" onClick={() => setselectedimg("/photos/indorehaldi2.jpg")} />
 
-<div className="viewMoreCard" onClick={()=>navigate("/gallery/birthday")}>
+          <img src="/photos/indorehaldi6.jpg" loading="lazy" onClick={() => setselectedimg("/photos/indorehaldi6.jpg")} />
 
-<h3 className="morebtn">View More</h3>
+          <img src="/photos/indorehaldi8.jpg" loading="lazy" onClick={() => setselectedimg("/photos/indorehaldi8.jpg")} />
 
-</div>
+          <img src="/photos/indorehaldi10.jpg" loading="lazy" onClick={() => setselectedimg("/photos/indorehaldi10.jpg")} />
 
+        </div>
 
 
-<h1>Engagement</h1>
+        <div className="viewMoreCard" onClick={() => navigate("/gallery/haldi")}>
 
-<div className="wedding">
+          <h3 className="morebtn">View More</h3>
 
-<img src="eng1.avif" loading="lazy" onClick={()=>setselectedimg("eng1.avif")} />
+        </div>
 
-<img src="eng2.jpg" loading="lazy" onClick={()=>setselectedimg("eng2.jpg")} />
+        <h1>Birthday</h1>
 
-<img src="eng3.jpg" loading="lazy" onClick={()=>setselectedimg("eng3.jpg")} />
+        <div className="wedding">
 
-<img src="eng4.jpg" loading="lazy" onClick={()=>setselectedimg("eng4.jpg")} />
+          <img src="shaktibir6.jpg" loading="lazy" onClick={() => setselectedimg("shaktibir6.jpg")} />
 
-</div>
+          <img src="shaktibir2.jpg" loading="lazy" onClick={() => setselectedimg("shaktibir2.jpg")} />
 
+          <img src="shaktibir3.jpg" loading="lazy" onClick={() => setselectedimg("shaktibir3.jpg")} />
 
-<div className="viewMoreCard" onClick={()=>navigate("/gallery/engagement")}>
+          <img src="shaktibir8.jpg" loading="lazy" onClick={() => setselectedimg("shaktibir8.jpg")} />
 
-<h3 className="morebtn">View More</h3>
+        </div>
 
-</div>
 
+        <div className="viewMoreCard" onClick={() => navigate("/gallery/birthday")}>
 
+          <h3 className="morebtn">View More</h3>
 
-<h1>Maternity</h1>
+        </div>
 
-<div className="wedding">
 
-<img src="maternity1.jpg" loading="lazy" onClick={()=>setselectedimg("maternity1.jpg")} />
 
-<img src="maternity2.jpg" loading="lazy" onClick={()=>setselectedimg("maternity2.jpg")} />
+        <h1>Engagement</h1>
 
-<img src="maternity4.jpg" loading="lazy" onClick={()=>setselectedimg("maternity4.jpg")} />
+        <div className="wedding">
 
-<img src="maternity5.jpg" loading="lazy" onClick={()=>setselectedimg("maternity5.jpg")} />
+          <img src="eng1.avif" loading="lazy" onClick={() => setselectedimg("eng1.avif")} />
 
-</div>
+          <img src="eng2.jpg" loading="lazy" onClick={() => setselectedimg("eng2.jpg")} />
 
+          <img src="eng3.jpg" loading="lazy" onClick={() => setselectedimg("eng3.jpg")} />
 
-<div className="viewMoreCard" onClick={()=>navigate("/gallery/maternity")}>
+          <img src="eng4.jpg" loading="lazy" onClick={() => setselectedimg("eng4.jpg")} />
 
-<h3 className="morebtn">View More</h3>
+        </div>
 
-</div>
 
+        <div className="viewMoreCard" onClick={() => navigate("/gallery/engagement")}>
 
+          <h3 className="morebtn">View More</h3>
 
-<h1>Haldi</h1>
+        </div>
 
-<div className="wedding">
 
-<img src="haldi1.webp" loading="lazy" onClick={()=>setselectedimg("haldi1.webp")} />
 
-<img src="haldi3.jpg" loading="lazy" onClick={()=>setselectedimg("haldi3.jpg")} />
+        <h1>Maternity</h1>
 
-<img src="haldi4.jpg" loading="lazy" onClick={()=>setselectedimg("haldi4.jpg")} />
+        <div className="wedding">
 
-<img src="haldi6.jpg" loading="lazy" onClick={()=>setselectedimg("haldi6.jpg")} />
+          <img src="maternity1.jpg" loading="lazy" onClick={() => setselectedimg("maternity1.jpg")} />
 
-</div>
+          <img src="maternity2.jpg" loading="lazy" onClick={() => setselectedimg("maternity2.jpg")} />
 
+          <img src="maternity4.jpg" loading="lazy" onClick={() => setselectedimg("maternity4.jpg")} />
 
-<div className="viewMoreCard" onClick={()=>navigate("/gallery/haldi")}>
+          <img src="maternity5.jpg" loading="lazy" onClick={() => setselectedimg("maternity5.jpg")} />
 
-<h3 className="morebtn">View More</h3>
+        </div>
 
-</div>
 
+        <div className="viewMoreCard" onClick={() => navigate("/gallery/maternity")}>
 
+          <h3 className="morebtn">View More</h3>
 
-<h1>Video shoots</h1>
+        </div>
 
-<div className="wedding-video">
 
 
 
-<div className="videoCard">
 
-<iframe
-src="https://drive.google.com/file/d/1P0UgvMXxXD4-2Q1OO6ocvAkiTaZ-eo6R/preview"
-loading="lazy"
-title="video2"
-allowFullScreen
-></iframe>
 
-</div>
 
-<div className="videoCard">
+        <h1>Video shoots</h1>
 
-<iframe
-src="https://drive.google.com/file/d/1n5-w7QbTHWsBBEhEhNzbCNYd_Ypoz5SX/preview"
-loading="lazy"
-title="video3"
-allowFullScreen
-></iframe>
+        <div className="wedding-video">
 
-</div>
 
-<div className="videoCard">
 
-<iframe
-src="https://drive.google.com/file/d/1z0KaMLoHfgLHY_9dL16XVjiglpmXMspf/preview"
-loading="lazy"
-title="video2"
-allowFullScreen
-></iframe>
+          <div className="videoCard">
 
-</div>
+  <iframe width="560" loading="lazy" height="315" src="https://www.youtube.com/embed/KMdj42tW07s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-; fullscreen" allowfullscreen></iframe>
 
-<div className="videoCard">
+          </div>
 
-<iframe
-src="https://drive.google.com/file/d/1KYWclvVSK5VQExADGpcO8fSxbbvYxmSP/preview"
-allow="autoplay"
-title="video1"
-allowFullScreen
-></iframe>
+          <div className="videoCard">
 
-</div>
+      <iframe width="560" loading="lazy" height="315" src="https://www.youtube.com/embed/dKQSiWnumr0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-; fullscreen" allowfullscreen></iframe>
 
+          </div>
 
+          <div className="videoCard">
 
-<div className="videoCard">
+            <iframe
+              src="https://drive.google.com/file/d/1z0KaMLoHfgLHY_9dL16XVjiglpmXMspf/preview"
+              loading="lazy"
+              title="video2"
+              allowFullScreen
+            ></iframe>
 
-<iframe
-src="https://drive.google.com/file/d/16PIfmBshw740IrBJmFtV_PRPMHw9NrZN/preview"
-allow="autoplay"
-title="video1"
-allowFullScreen
-></iframe>
+          </div>
 
-</div>
+          <div className="videoCard">
 
-</div>
+            <iframe
+              src="https://drive.google.com/file/d/1KYWclvVSK5VQExADGpcO8fSxbbvYxmSP/preview"
+              allow="autoplay"
+              title="video1"
+              allowFullScreen
+            ></iframe>
 
+          </div>
 
 
-<div
-className="viewMoreCard"
-onClick={()=>window.open("https://www.instagram.com/kapil_studio_gadarwara/reel/DJ7oqydz5_S/", "_blank")}
->
 
-<h3 className="morebtn">View More</h3>
+          <div className="videoCard">
 
-</div>
+            <iframe
+              src="https://drive.google.com/file/d/16PIfmBshw740IrBJmFtV_PRPMHw9NrZN/preview"
+              allow="autoplay"
+              title="video1"
+              allowFullScreen
+            ></iframe>
 
+          </div>
 
-</section>
+        </div>
 
 
 
+        <div
+          className="viewMoreCard"
+          onClick={() => window.open("https://www.instagram.com/kapil_studio_gadarwara/reel/DJ7oqydz5_S/", "_blank")}
+        >
 
+          <h3 className="morebtn">View More</h3>
 
-{selectedimg &&(
+        </div>
 
-<div className="lightbox">
 
-<span className="closeBtn" onClick={()=>setselectedimg(null)}>
-✕
-</span>
+      </section>
 
-<img src={selectedimg} alt="" />
 
-</div>
 
-)}
 
-{navbarpop && (
-  <div className="mobileMenu">
 
-    <Link to="/" onClick={()=> setnavbarpop(false)}>Home</Link>
-    <a href="#portfolio" onClick={()=> setnavbarpop(false)}>Portfolio</a>
-    <Link to="/about" onClick={()=> setnavbarpop(false)}>About</Link>
-  
-    <Link to="/contact" onClick={()=> {
-      setnavbarpop(false)
-      
-    }}>Contact</Link>
+      {selectedimg && (
 
-  </div>
-)}
+        <div className="lightbox">
 
-<Scroller />
-<Whatsapp />
+          <span className="closeBtn" onClick={() => setselectedimg(null)}>
+            ✕
+          </span>
 
-<Footer />
+          <img src={selectedimg} alt="" />
 
-</>
+        </div>
 
-)
+      )}
+
+      {navbarpop && (
+        <div className="mobileMenu">
+
+          <Link to="/" onClick={() => setnavbarpop(false)}>Home</Link>
+          <a href="#portfolio" onClick={() => setnavbarpop(false)}>Portfolio</a>
+          <Link to="/about" onClick={() => setnavbarpop(false)}>About</Link>
+
+          <Link to="/contact" onClick={() => {
+            setnavbarpop(false)
+
+          }}>Contact</Link>
+
+        </div>
+      )}
+
+      <Scroller />
+      <Whatsapp />
+
+      <Footer />
+
+    </>
+
+  )
 
 }
 

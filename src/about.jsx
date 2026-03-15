@@ -21,7 +21,7 @@ const navigate = useNavigate()
 
 {/* HERO */}
 <section className="aboutHero">
-    <h1>Capturing Moments That Last Forever</h1>
+    <h1>Frame your emotions, into Images</h1>
     <p>
         Every photograph tells a story. I capture real emotions,
         real moments and turn them into timeless memories.
