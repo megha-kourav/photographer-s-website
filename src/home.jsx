@@ -29,8 +29,8 @@ function Home() {
   // },[])
   const images = [
 "/photographerspic.jpg",
-"/photos/indorehaldi6.jpg",
-"/photos/indorewed14.jpg"
+"/indorehaldi6.jpg",
+"/indorewed14.jpg"
 ];
 
 const [index,setIndex] = useState(0);
@@ -55,7 +55,7 @@ return ()=> clearInterval(interval);
         <div className="navbar">
 
           <div className="logo">
-            <img src="/photos/pristine.png" style={{ filter: "invert(1)" }} alt="logo" />
+            <img src="/pristine.png" style={{ filter: "invert(1)" }} alt="logo" />
           </div>
           <img className="menu" src={!navbarpop ? "menu.png" : "cut.png"} alt="menu" onClick={() => setnavbarpop(!navbarpop)} />
           <ul className="navLinks">
@@ -114,13 +114,13 @@ return ()=> clearInterval(interval);
 
         <div className="wedding">
 
-          <img src="/photos/indorewed13.jpg" decoding="async" loading="lazy" alt="" onClick={() => setselectedimg("/photos/indorewed13.jpg")} />
+          <img src="/indorewed13.jpg" decoding="async" loading="lazy" alt="" onClick={() => setselectedimg("/photos/indorewed13.jpg")} />
 
-          <img src="/photos/indorewed14.jpg" decoding="async" loading="lazy" alt="" onClick={() => setselectedimg("/photos/indorewed14.jpg")} />
+          <img src="/indorewed14.jpg" decoding="async" loading="lazy" alt="" onClick={() => setselectedimg("/photos/indorewed14.jpg")} />
 
-          <img src="/photos/indorewed12.jpg" decoding="async" loading="lazy" alt="" onClick={() => setselectedimg("/photos/indorewed12.jpg")} />
+          <img src="/indorewed12.jpg" decoding="async" loading="lazy" alt="" onClick={() => setselectedimg("/photos/indorewed12.jpg")} />
 
-          <img src="/photos/indorewed5.jpg" decoding="async" loading="lazy" alt="" onClick={() => setselectedimg("/photos/indorewed5.jpg")} />
+          <img src="/indorewed5.jpg" decoding="async" loading="lazy" alt="" onClick={() => setselectedimg("/photos/indorewed5.jpg")} />
 
         </div>
 
@@ -135,13 +135,13 @@ return ()=> clearInterval(interval);
 
         <div className="wedding">
 
-          <img src="/photos/indorehaldi2.jpg" loading="lazy" onClick={() => setselectedimg("/photos/indorehaldi2.jpg")} />
+          <img src="/indorehaldi2.jpg" loading="lazy" onClick={() => setselectedimg("/photos/indorehaldi2.jpg")} />
 
-          <img src="/photos/indorehaldi6.jpg" loading="lazy" onClick={() => setselectedimg("/photos/indorehaldi6.jpg")} />
+          <img src="/indorehaldi6.jpg" loading="lazy" onClick={() => setselectedimg("/photos/indorehaldi6.jpg")} />
 
-          <img src="/photos/indorehaldi8.jpg" loading="lazy" onClick={() => setselectedimg("/photos/indorehaldi8.jpg")} />
+          <img src="/indorehaldi8.jpg" loading="lazy" onClick={() => setselectedimg("/photos/indorehaldi8.jpg")} />
 
-          <img src="/photos/indorehaldi10.jpg" loading="lazy" onClick={() => setselectedimg("/photos/indorehaldi10.jpg")} />
+          <img src="/indorehaldi10.jpg" loading="lazy" onClick={() => setselectedimg("/photos/indorehaldi10.jpg")} />
 
         </div>
 

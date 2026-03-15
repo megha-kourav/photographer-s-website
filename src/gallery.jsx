@@ -10,12 +10,12 @@ function Gallery() {
   const [gallery, setgallery] = useState([])
   const [selectedimg, setselectedimg] = useState(null)
   const imgs = {
-    wedding: ["/photos/indorewed4.jpg", "/photos/indorewed7.jpg", "/photos/indorewed8.jpg", "/photos/indorewed9.jpg", "/photos/indorewed1.jpg", "/photos/indorewed2.jpg", "/photos/indorewed3.jpg", "/photos/indorewed11.jpg", "/photos/indorewed12.jpg", "/photos/indorewed13.jpg", "/photos/indorewed14.jpg", "/photos/indorewed5.jpg"],
+    wedding: ["/indorewed4.jpg", "/indorewed7.jpg", "/indorewed8.jpg", "/indorewed9.jpg", "/indorewed1.jpg", "/indorewed2.jpg", "/indorewed3.jpg", "/indorewed11.jpg", "/indorewed12.jpg", "/indorewed13.jpg", "/indorewed14.jpg", "/indorewed5.jpg"],
     prewedding: ["/prewedding7.jpg", "/prewedding15.jpg", "/prewedding9.jpg", "/prewedding2.jpg", "/prewedding3.jpeg", "/prewedding10.png", "/prewedding11.webp", "/prewedding12.webp", "/prewedding14.webp", "/prewedding13.webp", "/prewedding1.jpg", "/prewedding4.jpg"],
     birthday: ["/shaktibir7.jpg", "/shaktibir8.jpg", "/shaktibir3.jpg", "/shaktibir6.jpg", "/shaktibir5.jpg", "/shaktibir1.jpg", "/shaktibir9.jpg"],
     engagement: ["/eng1.avif", "/eng2.jpg", "/eng3.jpg", "/eng4.jpg", "/eng1.avif", "/eng2.jpg", "/eng3.jpg"],
     maternity: ["/maternity1.jpg", "/maternity2.jpg", "/maternity3.jpg", "/maternity4.jpg", "/maternity5.jpg", "/maternity1.jpg", "/maternity2.jpg"],
-    haldi: ["/photos/indorehaldi9.jpg", "/photos/indorehaldi7.jpg", "/photos/indorehaldi4.jpg", "/photos/indorehaldi11.jpg", "/photos/indorehaldi6.jpg", "/photos/indorehaldi8.jpg", "/photos/indorehaldi2.jpg", "/photos/indorehaldi13.jpg", "/photos/indorehaldi1.jpg", "/photos/indorehaldi11.jpg", "/photos/indorehaldi12.jpg", "/photos/indorehaldi3.jpg" ]
+    haldi: ["/indorehaldi9.jpg", "/indorehaldi7.jpg", "/indorehaldi4.jpg", "/indorehaldi11.jpg", "/indorehaldi6.jpg", "/indorehaldi8.jpg", "/indorehaldi2.jpg", "/indorehaldi13.jpg", "/indorehaldi1.jpg", "/indorehaldi11.jpg", "/indorehaldi12.jpg", "/indorehaldi3.jpg"]
 
   }
   const { category } = useParams()
